@@ -7,8 +7,8 @@ const roomHandler = (socket: Socket) => {
         socket.emit("roomCreated", {roomId}); // emit the roomId to the client
         console.log(`Room created with ID: ${roomId}`);
     };
-    const joinRoom = ({roomId}:{roomId:string}) => {
-        console.log("New user has joined room ",roomId);
+    const joinRoom = ({roomId}: {roomId: string}) => {
+        console.log("New user has joined room ", roomId);
     };
     socket.on("createRoom", createRoom);
     socket.on("joinRoom", joinRoom);
